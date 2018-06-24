@@ -6,5 +6,4 @@ KEY_FILE="~/.ssh/devopstest.pem"
 
 mkdir ~/.ssh
 echo "$PKEY" >> $KEY_FILE
-ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
-ssh $HOST -l $EC2_USER -i "$KEY_FILE" "sudo docker pull $IMAGE:$VERSION && sudo docker stop $CONTAINER && sudo docker rm $CONTAINER && sudo docker run --name $CONTAINER $IMAGE:$VERSION"
+ssh -oStrictHostKeyChecking=no -oUserKnownHostsFile=/dev/null $HOST -l $EC2_USER -i "$KEY_FILE" "sudo docker pull $IMAGE:$VERSION && sudo docker stop $CONTAINER && sudo docker rm $CONTAINER && sudo docker run --name $CONTAINER $IMAGE:$VERSION"
