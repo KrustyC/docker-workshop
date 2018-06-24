@@ -3,7 +3,28 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "babel-node": "babel-node --presets=latest",
+    "dev": "nodemon --exec npm run babel-node -- ./index.js",
+    "build": "babel src -d dist"
+  },
+  "description": "Workshop on docker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrustyC/docker-workshop.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/KrustyC/docker-workshop/issues"
+  },
+  "homepage": "https://github.com/KrustyC/docker-workshop#readme",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-import": "^1.8.0",
+    "babel-preset-latest": "^6.24.1",
+    "nodemon": "^1.17.5"
   }
 }
