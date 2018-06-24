@@ -2,7 +2,7 @@ import express from 'express'
 
 const app = express()
 
-app.get('/', (req, res) => res.send('Hello Docker!'))
+app.get('/', (req, res) => res.send('Goodbye Docker!'))
 
-const PORT = 3000
+const PORT = 30000
 app.listen(PORT, () => console.log(`App listening on port ${PORT}!`))
