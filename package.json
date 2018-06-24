@@ -7,8 +7,7 @@
   "homepage": "https://github.com/KrustyC/docker-workshop#readme",
   "author": "davide.crestini94@gmail.com",
   "scripts": {
-    "babel-node": "babel-node --presets=latest",
-    "start": "nodemon --exec npm run babel-node -- ./index.js",
+    "start": "nodemon --exec babel-node -- ./index.js",
     "build": "babel src -d dist"
   },
   "repository": {
